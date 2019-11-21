@@ -1,0 +1,14 @@
+train/
+valid/
+test/
+prediction/
+food/
+no_food/
+my_testdata/
+Webapp/
+old/
+.ipynb_checkpoints
+ResNet50V2.h5
+Load_ResNet.ipynb
+ju.sh
+
