@@ -4,6 +4,8 @@ test/
 prediction/
 food/
 no_food/
+!sample_data/food/
+!sample_data/no_food/
 my_testdata/
 Webapp/
 old/
