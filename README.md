@@ -35,13 +35,11 @@ These images were split into training set, validation set, and test set as follo
 
 - `Food_project_smallDNN.ipynb` : Small CNN from scratch.
 
-- `Food_Project_mytest.ipynb` : Test script to test the model created using transfer learning with my own images.
+- `Food_Project_mytest.ipynb` : Test script to test the model created using transfer learning with my own images. When you test on your own images, make `my_testdata` directory in this repo and put photos in there before running this script.
 
 - `Makedata.ipynb` : Script to prepare image data. This copies images from `food/` `no_food/` to `train/` `valid/` `test/` directory with checking, resizing, and converting images into jpg. (Made just for my convenience)
 
-- `train_valid_test.zip` : Image files mentioned in the previous section. Do `unzip train_valid_test.zip` in this repository, then `train/` `valid/` `test/` directories will be made.
-
-- `my_testdata.zip` : Image files for my own test. Do `unzip my_testdata.zip` in this repository, then `my_testdata/` directory will apprear. You could add new images you want to test in there. Then run `Food_Project_mytest.ipynb`.
+- `sample_data/` : Some samples of image files extracted from the dataset mentioned in the previous section(I won't upload all dataset because the size will be too large).
 
 - `food_model_resnet_1573727092.h5` : Trained model file created in `Food_project_TransferLearning.ipynb`.
 
