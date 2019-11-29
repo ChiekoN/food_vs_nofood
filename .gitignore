@@ -7,10 +7,15 @@ no_food/
 !sample_data/food/
 !sample_data/no_food/
 my_testdata/
-Webapp/
+
 old/
 .ipynb_checkpoints
 ResNet50V2.h5
 Load_ResNet.ipynb
 ju.sh
+
+Webapp/*.h5
+Webapp/output_food_model/
+Webapp/webdnn/
+Webapp/server.sh
 

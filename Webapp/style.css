@@ -1,0 +1,92 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.title {
+    padding: 0em 2em 0.2em 2em;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    /* background: #e8e3da; */
+    border-bottom: 5px solid #63968a;
+}
+
+.title h1 {
+    font-size: 1.5em;
+    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
+
+.main {
+    margin: 3em 3em 3em 3em;
+    /* max-width: 600px; */
+    text-align: left;
+}
+
+p.desc {
+    font-size: 1.0em;
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 0em 0.5em 0em 0.5em;
+    color: #5d5d5d;
+}
+
+.loadinfo {
+    height: 4.5em;
+    margin: 1em 0em 1em 0em;
+}
+
+.select {
+}
+
+.btn {
+    font-size: 1em;
+    padding: 0.5em;
+    margin: 1em 0em 1em 0em;
+    background-color:#737c7f;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+    
+.btn:hover {
+    background-color:#3a494e;
+}
+
+.btn:active {
+    box-shadow: 0 5px #888;
+    transform: translate(2px,2px);
+    background-color: #8e9a9e;
+    border-style: none:;
+}
+
+.btn:focus {
+    outline-style: none;
+}
+
+.btn:disabled {
+    background-color: #b9b9b9;
+}
+
+
+.show_filename {
+    padding-left: 2em;
+}
+
+.frame {
+    /* border: 1px solid; */
+    margin: 2em;
+}
+
+.hidden-form{
+    display: none;
+}
+
+.test_btn {
+    background-color:#238870;
+    padding: 0.5em 2em 0.5em 2em;
+}
+
+.show_result {
+    font-size: 2em;
+    font-weight: bold;
+    vertical-align: middle;
+    padding: 0em 2em 0em 2em;
+}
+    

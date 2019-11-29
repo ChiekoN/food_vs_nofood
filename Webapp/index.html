@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Detecting food/no-food images</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="webdnn/dist/webdnn.js"></script>
+    <!--- <script src="../data/imagenet_labels.js"></script> --->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="title">
+    <h1>Food or Not-food classification</h1>
+    <p class="desc">This app can tell if the image is a food photo or not.</P> 
+  </div>
+  
+  <div class="main">
+    <div class="loadinfo">
+      <p id="loading_msg">Preparing the model ...</p>
+    </div>
+
+    <div>
+      <div class="select">
+        <input type="file" accept="image/*" id="image_url" style="display:none" onchange="handleFiles(this.files)">
+        <button id="file_button" class="btn">Select image file</button>
+        <span id="filename" class="show_filename"></span>
+      </div>
+      <div>
+         <img id="frame" class="frame" src="image-icon.jpg">
+      </div>
+
+      <!--- Hide selection form for framework and backend -->
+      <!--- Set internally as backend="auto", framework="Keras" -->
+      <div class="hidden-form">
+            <div class="form-group">
+                <label class="mr-3">backend</label>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="backend" value="" checked> auto
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="backend" value="webgpu"> webgpu
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="backend" value="webgl"> webgl
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="backend" value="webassembly"> webassembly
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="backend" value="fallback"> fallback (slow; debug
+                        only)
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="mr-3">Framework</label>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="framework" value="keras" checked> Keras
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="framework" value="chainer"> Chainer
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="framework" value="tensorflow"> Tensorflow
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="radio" name="framework" value="pytorch"> PyTorch
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!--- Hide selection form end -->
+
+
+    <div>
+        <button class="btn test_btn" id="run_button" type="button" onclick="run_entry()" disabled>Test</button>
+        <span id="result" class="show_result"></span>
+    </div>
+</div>
+
+</body>
+</html>

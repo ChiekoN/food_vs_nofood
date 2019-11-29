@@ -43,6 +43,8 @@ These images were split into training set, validation set, and test set as follo
 
 - `food_model_resnet_1573727092.h5` : Trained model file created in `Food_project_TransferLearning.ipynb`.
 
+- `Webapp/` : Food vs Not-food Classification Web App directory. (see below)
+
 ## Run
 
 To run `Food_project_TransferLearning.ipynb` in your own environment, please revise the following line in the 3rd block:
@@ -53,6 +55,7 @@ pretrained_model = load_model('ResNet50V2.h5')
 Remove `#` from the first line and comment out the second line instead.
 
 ## Version
+
 - Python 3.7
 - Keras 2.2
 - Tensorflow 1.14
@@ -60,3 +63,16 @@ Remove `#` from the first line and comment out the second line instead.
 - Matplotlib 3.1
 - Seaborn 0.9
 - PIL 6.1
+
+## App
+
+I made a simple **web app** to demonstrate how this model works.
+
+![food vs no food app](food_vs_nofood_app.gif)
+
+To use it, you need to download [MIL WebDNN](https://mil-tokyo.github.io/webdnn/)(installation guide and tutorial is [here](https://mil-tokyo.github.io/webdnn/docs/tutorial/index.html)), which makes a DNN model enable to run in web browser very fast. (It's quite easy to use and the response is really quick!)
+
+HTML, CSS, Javascript files are in `Webapp/` directory. When you try to run this app, prepare the following materials under `Webapp/` as well as the existing files in this repo:
+ - `food_model_resnet_1573727092.h5` : Trained model file
+ - `webdnn/` : cloned *MIL WebDNN* repository
+ - `output_food_model/` : *\"graph descriptor\"* directory created by *MIL WebDNN*.
