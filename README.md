@@ -6,7 +6,7 @@ This model performs binary classifiation in which input images are classified as
 
 I personally like taking picutures of my own cookings and beautiful meals I ate at restaurants and cafes. Also food photos are so popular in these days thanks to Instagram. Everyone loves to see yummy-looking food photos! However, there are so many styles of cooking. Colours, shapes and layout could very much vary from photo to photo. So I was curious about how well DL was able to detect food images from no-food images.
 
-## Summary
+## Overview
 
 I applied transfer learning to build the food/no-food classification CNN model. The pretrained model I used was Resnet50 v2. I removed the final layer of Resnet50 and instead attached a block which consists of a GlobalAveragePooling layer with dropout, a fully connected layer with dropout, and one more fully connected layer that performs binary classification as output.
 
